@@ -12,6 +12,8 @@
 
 This [Colab](./Deepfake_end_to_end_tortoise_wav2lip_Colab.ipynb) notebook provides a step-by-step guide to generate a deepfake video by cloning a voice onto a video. The process involves uploading video and voice files, renaming them, extracting audio, creating audio chunks, and finally using Wav2Lip for deepfake generation.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nsourlos/end-to-end_deepfake_colab]
+
 ## Steps
 
 **Before executing this notebook we need to have a folder in our Google Drive named ```deepfake``` with at least a video file (mp4 format). It is strongly recommended to also include an audio (mp3 format) file to clone the voice from. Especially for cases of non-English language in the video, it is essential to upload an English audio file as well.**
