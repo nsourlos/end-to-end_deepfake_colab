@@ -18,6 +18,15 @@ This [Colab](./Deepfake_end_to_end_tortoise_wav2lip_Colab.ipynb) notebook provid
 
 **Before executing this notebook we need to have a folder in our Google Drive named ```deepfake``` with at least a video file (mp4 format). It is strongly recommended to also include an audio (mp3 format) file to clone the voice from. Especially for cases of non-English language in the video, it is essential to upload an English audio file as well.**
 
+**Caution: Text prompt should be separated with '|' every one to two sentences (every ~20secs it takes to read it). If you get any warnings and restart session is suggested (after installing a library - e.g. librosa, as shown in the <a href="#image">figure</a> below), click 'cancel'. In the free version (T4 or V100 with 15GB VRAM and ~13GB RAM) the maximum audio/video duration can be ~50secs (takes ~30mins to run the script and obtain results). For a longer text prompt a larger GPU is needed (paid version using L4 with 22.5GB VRAM and ~63GB of RAM or A100 with 40GB VRAM and ~84GB RAM - the latter uses more compute units/hour).**
+
+<!-- ![Warning](./warning_restart.png width="300") -->
+<!-- <img src="./warning_restart.png" alt="Warning" width="500"/> -->
+
+<div id="image" style="text-align: center;">
+  <img src="./warning_restart.png" alt="Warning" width="500"/>
+</div>
+
 ### 1. Upload Video and Voice Files
 
 - Mount Google Drive to access files.
@@ -64,7 +73,7 @@ If only a video is provided, extract audio from it to be used to clone the indiv
 Create a folder with 10-second chunks of audio to be used as input in Tortoise.
 
 ### 8. Confirm Audio and Video Duration
-Ensure audio and video have the same duration. If not, trim the longer one to match the shorter one or cut both to 20 seconds.
+Ensure audio and video have the same duration. If not, trim the longer one to match the shorter one (or cut them both to 20 seconds).
 
 ### 9. Clone Wav2Lip Repository and Download Models
 Clone Wav2Lip GitHub repository, download pre-trained models, and install dependencies.
